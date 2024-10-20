@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: rgb(197, 180, 158);
+}
+
+header {
+    background: #333;
+    color: white;
+    background-image: url('https://t4.ftcdn.net/jpg/01/34/82/17/240_F_134821701_mcQ39O6Us7sURGZl82HTYEM3icmsD4kp.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo{
+    color: rgb(247, 139, 107);
+}
+
+header h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: blueviolet;
+}
+header h1 strong{
+    font-size: 4rem;
+    color: rgb(48, 194, 19);
+}
+header p{
+    font-size: 1.5rem;
+    color: rgb(84, 228, 238);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.logo{
+    margin-left: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    /* border: 1px solid white; */
+}
+.about{
+    margin-top: 100px;
+    width: 50%;
+    height: 40%;
+    margin-left:20px;
+    overflow: visible;
+
+}
+#skill h2{
+    text-align: center;
+}
+.skill-set{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.skill{
+    background-color: rgb(146, 175, 204);
+    color: white;
+    /* padding: 20px; */
+    text-align: center;
+}
+.skill img{
+    height: 50%;
+    width: 50%;
+}
+.skill h3{
+    color: black;
+}
+.skill:hover{
+    opacity: .5;
+}
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* One column on small devices */
+    }
+}
+
+.projects{
+    margin-top: 50px;
+    
+}
+.projects h2{
+    text-align: center;
+    margin: auto;
+}
+
+section {
+    padding: 20px;
+}
+.contact{
+    margin-top: 50px;
+    margin-left: 10px;
+    background-color:#333 ;
+    color: white;
+}
+.contact h2{
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+}
+
+.socials a {
+    margin-right: 10px;
+}
