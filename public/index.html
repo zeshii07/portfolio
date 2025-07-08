@@ -7,37 +7,143 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Zeeshan Ahmad's Cybersecurity & Network Engineering Portfolio"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Zeeshan Ahmad - Portfolio</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind CSS custom configuration for Play CDN
+      tailwind.config = {
+        darkMode: 'class', // Enable dark mode based on 'dark' class on HTML
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'], // Define custom font family
+            },
+            colors: {
+              // Define your modern color palette
+              primary: {
+                50: '#e0f2fe', // Light blue
+                100: '#bfdbfe',
+                200: '#93c5fd',
+                300: '#60a5fa',
+                400: '#3b82f6',
+                500: '#2563eb', // Main blue
+                600: '#1d4ed8',
+                700: '#1e40af',
+                800: '#1e3a8a',
+                900: '#1e306e', // Dark blue
+              },
+              secondary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9', // Sky blue
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+              accent: {
+                50: '#fef2f2',
+                100: '#fee2e2',
+                200: '#fecaca',
+                300: '#fca5a5',
+                400: '#f87171',
+                500: '#ef4444', // Red accent
+                600: '#dc2626',
+                700: '#b91c1c',
+                800: '#991b1b',
+                900: '#7f1d1d',
+              },
+              // Dark mode specific colors
+              darkbg: '#1a202c', // Very dark background
+              darkcard: '#2d3748', // Slightly lighter dark for cards
+              darktext: '#e2e8f0', // Light text on dark background
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom Multi-color Heading Styles */
+      .gradient-text-blue-red {
+        background: linear-gradient(to right, theme('colors.primary.500'), theme('colors.accent.500'));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent; /* Fallback for non-webkit browsers */
+      }
+
+      .gradient-text-purple-teal {
+        background: linear-gradient(to right, #8a2be2, #00ced1); /* Custom vibrant gradient */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .gradient-text-gold-orange {
+        background: linear-gradient(to right, #FFD700, #FF8C00); /* Gold to Orange */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+
+      /* Custom Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes slideInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes scaleIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% { box-shadow: 0 0 0px rgba(0, 0, 0, 0); }
+        50% { box-shadow: 0 0 15px theme('colors.primary.500'); }
+      }
+
+      /* Apply animations */
+      .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+      .animate-slide-in-up { animation: slideInUp 0.8s ease-out forwards; }
+      .animate-scale-in { animation: scaleIn 0.7s ease-out forwards; }
+      .animate-pulse-glow:hover { animation: pulseGlow 1.5s infinite alternate; }
+      .animate-delay-100 { animation-delay: 0.1s; }
+      .animate-delay-200 { animation-delay: 0.2s; }
+      .animate-delay-300 { animation-delay: 0.3s; }
+      .animate-delay-400 { animation-delay: 0.4s; }
+      .animate-delay-500 { animation-delay: 0.5s; }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
